@@ -18,7 +18,7 @@ header img {
 }
 
 nav {
-    background-color: darkred;   
+    background-color: goldenrod;   
 }
 
 a.menu {
@@ -30,7 +30,7 @@ a.menu {
     text-align: center;
 }
 a.menu:hover {
-    background-color: lightgray;
+    background-color: darkgoldenrod;
 }
 
 article {
@@ -95,17 +95,65 @@ a.link{
 }
 table.tabela{
     border-collapse: collapse;
-    margin: auto;
-    background-color: darkgreen
+    margin: 10px auto;
+    background-color: goldenrod;
 }
 th, td{
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 8px;
     text-align: center;
 }
 tr.a{
-    background-color: azure
+    background-color: darkgray
 }
 tr.b{
-    background-color: aqua
+    background-color: lightgray
+}
+.gallery {
+  display: flex;
+  overflow-x: auto;   
+  gap: 10px;    
+  padding: 10px;
+  border: 1px solid;
+}
+
+.gallery img {
+  max-height: 350px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gallery img:hover {
+  transform: scale(1.05); 
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
 }
